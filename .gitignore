@@ -4,3 +4,6 @@ __pycache__/
 .env
 
 .DS_Store
+.rasa/cache/
+*.tar.gz
+*.db
