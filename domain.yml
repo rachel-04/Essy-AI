@@ -1,0 +1,264 @@
+version: "3.1"
+
+intents:
+  - affirm
+  - greet
+  - goodbye
+  - ask_parking_info
+  - maintenance_request
+  - rent_payment
+  - report_issue
+  - move_in_process
+  - move_out_process
+  - amenities_availability
+  - event_sign_up
+  - profile_update
+  - guest_policy
+  - lease_extension
+  - request_document
+  - community_engagement
+  - maintenance_request_follow_up
+  - utility_management
+  - package_delivery
+  - schedule_maintenance
+  - contact_building_management
+  - deny
+  - request_maintenance
+  - package_inquiry
+  - parking_inquiry
+
+entities:
+  - maintenance_type
+  - issue
+  - date
+  - tenant_name
+  - parking_spot
+  - guest_number
+  - payment_method
+  - document_type
+  - event_name
+  - utility_type
+  - lease_extension_duration
+  - guest_name
+
+
+forms:
+  maintenance_form:
+    required_slots:
+      - maintenance_type
+      - issue
+       
+
+slots:
+  maintenance_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: maintenance_type
+  issue:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: issue
+
+
+
+synonyms:
+  maintenance:
+    - maintenence
+    - mainteance
+    - fix
+    - repair
+    - mntnce
+    - maintainence
+
+  plumber:
+    - plumbing technician
+    - repairman
+    - handyman
+    - fix pipes
+    - pipe specialist
+    - water repair
+
+  rent_payment:
+    - rent
+    - rental payment
+    - pay rent
+    - rental fee
+    - lease fee
+    - monthly fee
+    - monthly rent
+    - payment for rent
+
+  amenities:
+    - facilities
+    - building amenities
+    - resources
+    - common areas
+    - community facilities
+    - shared spaces
+    - building resources
+    - available services
+
+  move_in_process:
+    - moving in
+    - move-in
+    - move into apartment
+    - apartment move
+    - relocation
+    - shifting
+    - residence entry process
+
+  move_out_process:
+    - moving out
+    - move-out
+    - vacate
+    - leave apartment
+    - exit process
+    - vacating the building
+
+  lease_extension:
+    - renew lease
+    - lease renewal
+    - lease extension process
+    - rental renewal
+    - lease agreement renewal
+    - extend rental period
+
+  guest_policy:
+    - visitor policy
+    - guest rules
+    - rules for visitors
+    - visiting guidelines
+    - visitor regulations
+    - guest permissions
+
+  parking:
+    - parking spot
+    - parking space
+    - car park
+    - vehicle parking
+    - garage
+    - parking lot
+    - parking area
+
+  maintenance_request:
+    - request repair
+    - service request
+    - fix request
+    - maintenance service
+    - repair request
+
+  report_issue:
+    - complaint
+    - report problem
+    - notify issue
+    - issue report
+    - file complaint
+    - raise problem
+    - register issue
+
+  package_delivery:
+    - delivery
+    - parcel
+    - mail
+    - package drop
+    - courier
+    - post
+    - package received
+    - package pick up
+    - package drop off
+
+  utility_management:
+    - utilities
+    - utility services
+    - manage utilities
+    - electricity management
+    - water service
+    - utility control
+    - power management
+    - gas management
+
+  contact_building_management:
+    - contact manager
+    - building office
+    - building administration
+    - building supervisor
+    - property manager
+    - management office
+
+  profile_update:
+    - update profile
+    - edit personal information
+    - change details
+    - update account
+    - modify profile
+    - change settings
+    - update personal data
+
+  event_sign_up:
+    - sign up for event
+    - register for event
+    - attend event
+    - event registration
+    - join event
+    - participate in event
+
+  greet:
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - greetings
+    - what's up
+
+  goodbye:
+    - bye
+    - goodbye
+    - see you later
+    - catch you later
+    - take care
+    - farewell
+    - see you soon
+    - I'm leaving
+    - talk to you later
+
+  affirm:
+    - yes
+    - yeah
+    - yup
+    - sure
+    - absolutely
+    - indeed
+    - of course
+    - correct
+    - agreed
+    - you got it
+
+  deny:
+    - no
+    - nope
+    - not at all
+    - absolutely not
+    - negative
+    - disagree
+    - no thanks
+    - wrong
+    - not true
+    - never
+
+
+actions:
+  - action_extract_slots
+  - action_greet
+  - action_ask_maintenance_type  # Custom action for handling maintenance
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

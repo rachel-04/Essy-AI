@@ -1,0 +1,45 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# The assistant project unique identifier
+assistant_id: 20241011-140842-perfect-weight
+
+# Configuration for Rasa NLU.
+language: en
+
+pipeline:
+  - name: "spell_correction.SpellCorrectionComponent"  # Custom spell-checking component
+  - name: WhitespaceTokenizer  # Tokenizer comes first
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer  # Word-level featurizer
+  - name: CountVectorsFeaturizer  # Character-level featurizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "bert-base-uncased"
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+    constrain_similarities: true
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+# Configuration for Rasa Core.
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true

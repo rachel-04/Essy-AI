@@ -1,0 +1,698 @@
+version: "3.1"
+nlu:
+
+- intent: move_in_process
+  examples: |
+    - How do I move in?
+    - Can you tell me how to move in?
+    - What is the process for moving in?
+    - I’m new here, how do I start the move-in process?
+    - Is there a guide for moving into the building?
+    - What paperwork do I need for moving in?
+    - What’s the first step for moving into my apartment?
+    - What’s the elevator booking procedure for moving in?
+    - Do I need to notify anyone about my moving [date](date)?
+    - How far in advance do I need to book the elevator?
+    - How long does it take to move in?
+    - Are there move-in restrictions?
+    - Can I hire a moving company for the move-in?
+    - Is there a specific time to move in?
+    - What do I do on my move-in day?
+    - Who do I need to notify for the move-in?
+    - Do I need approval for my moving [date](date)?
+    - What documentation is required for move-in?
+    - Is there a move-in fee?
+    - Can I move in on the weekend?
+    - Who handles move-in issues?
+    - Can I reschedule my move-in [date](date)?
+    - Are there any parking spots for movers?
+    - Can I check the apartment before moving in?
+    - Where do I pick up my keys for move-in?
+
+- intent: schedule_maintenance
+  examples: |
+    - How can I schedule [maintenance](maintenance_type)?
+    - I need help with something in my apartment. How can I get it fixed?
+    - My [AC](issue) is broken. How do I request [maintenance](maintenance_type)?
+    - What’s the procedure to book [maintenance](maintenance_type)?
+    - Can I schedule [maintenance](maintenance_type) through the app?
+    - I need a [plumber](maintenance_type), how do I book that?
+    - What’s the process for [maintenance](maintenance_type) requests?
+    - How soon can I get someone to fix my [plumbing](issue)?
+    - Is [maintenance](maintenance_type) available on weekends?
+    - Do I have to be home for [maintenance](maintenance_type) to come?
+    - Can I cancel a [maintenance](maintenance_type) request?
+    - How do I modify a [maintenance](maintenance_type) request?
+    - Is emergency [maintenance](maintenance_type) available?
+    - Can I choose a specific time for [maintenance](maintenance_type)?
+    - What types of repairs does [maintenance](maintenance_type) handle?
+    - Do I need to pay for [maintenance](maintenance_type)?
+    - How do I track my [maintenance](maintenance_type) request?
+    - How long will it take to get a response?
+    - What should I do if [maintenance](maintenance_type) is delayed?
+    - Can I request [maintenance](maintenance_type) outside of business hours?
+    - How do I request [maintenance](maintenance_type) for a leaking pipe?
+    - How do I request an [HVAC](issue) repair?
+    - How do I request pest control [maintenance](maintenance_type)?
+    - Who is responsible for [maintenance](maintenance_type) costs?
+    - How do I escalate a [maintenance](maintenance_type) issue?
+
+- intent: rent_payment
+  examples: |
+    - How do I pay my rent?
+    - Can I pay rent online?
+    - When is rent due?
+    - How do I set up automatic payments for rent?
+    - Can I pay rent by [credit card](payment_method)?
+    - What methods can I use to pay my rent?
+    - Is there a late fee if I pay rent after the due [date](date)?
+    - How can I see my rent payment history?
+    - What happens if I miss a rent payment?
+    - Is there a grace period for rent payment?
+    - Can I change my [payment method](payment_method)?
+    - Can I split my rent payments?
+    - Can I pay rent in advance?
+    - How do I stop automatic payments for rent?
+    - What is the rent payment process for new tenants?
+    - How do I set up recurring rent payments?
+    - How do I report a rent payment issue?
+    - Can I use a [debit card](payment_method) to pay my rent?
+    - Are there extra fees for online payments?
+    - How can I view my balance before paying rent?
+    - What are the penalties for late rent payment?
+    - Can I request a rent payment extension?
+    - How do I know if my rent payment was successful?
+    - Can I get a receipt for my rent payment?
+    - What happens if my rent payment fails?
+
+- intent: amenities_availability
+  examples: |
+    - What amenities are available in the building?
+    - Can I use the rooftop garden?
+    - How do I access the gym?
+    - Is there a lounge area I can use?
+    - What are the opening hours for the gym?
+    - Is there a pool in the building?
+    - Are there any communal areas for residents?
+    - Does the building have coworking spaces?
+    - How can I book the community lounge?
+    - Is there Wi-Fi available in the communal areas?
+    - Are there any BBQ areas available?
+    - Is there a pet washing station in the building?
+    - Can I use the fitness center for free?
+    - Are there any restrictions on using the amenities?
+    - Can I bring guests to the pool?
+    - Is the gym open 24/7?
+    - Do I need a key to access the gym?
+    - Is there a sauna in the building?
+    - How do I book the rooftop for an event?
+    - Can I access the gym on weekends?
+    - Are the amenities open during holidays?
+    - How many people can I bring to the lounge?
+    - Are there lockers available in the gym?
+    - Are there any yoga classes offered in the gym?
+    - Is there a cleaning service for the pool area?
+
+- intent: event_sign_up
+  examples: |
+    - How can I sign up for the next [community event](event_name)?
+    - Are there any upcoming social [events](event_name)?
+    - Where do I register for [events](event_name) in the building?
+    - How do I join the [yoga class](event_name)?
+    - I want to attend the [resident meeting](event_name), how do I sign up?
+    - Are there any [events](event_name) I can attend this weekend?
+    - Is the next [event](event_name) free or do I need to register?
+    - How do I cancel my registration for an [event](event_name)?
+    - Can I bring a [guest](guest_name) to the [event](event_name)?
+    - What is the deadline for signing up for [events](event_name)?
+    - How do I get a ticket for the [event](event_name)?
+    - Can I sign up for [events](event_name) online?
+    - How do I receive [event](event_name) notifications?
+    - How do I know if I’m registered for the [event](event_name)?
+    - Can I sign up for multiple [events](event_name) at once?
+    - What [events](event_name) are happening this month?
+    - Are there outdoor [events](event_name) planned?
+    - Is there an [event schedule](event_name) I can view?
+    - Can I register for an [event](event_name) through the app?
+    - How do I sign up for the [resident BBQ](event_name)?
+    - Can I host a [community event](event_name)?
+    - What kind of [events](event_name) are usually hosted?
+    - Can I attend [events](event_name) without registering?
+    - How do I get on the [event](event_name) waiting list?
+    - How do I request a refund for [event tickets](event_name)?
+
+- intent: profile_update
+  examples: |
+    - How do I update my profile on Gatherly?
+    - Can I change my personal information in the app?
+    - I need to upload a new profile picture. How do I do that?
+    - How can I edit my [tenant details](tenant_name)?
+    - Where can I change my [phone number](tenant_name) in the app?
+    - How do I update my [email address](tenant_name) on the profile?
+    - I want to edit my [contact details](tenant_name), how can I do it?
+    - How do I delete my profile picture?
+    - How do I update my [emergency contact](tenant_name) information?
+    - How do I change my [name](tenant_name) on my profile?
+    - Can I add social media links to my profile?
+    - How do I change my profile bio?
+    - Can I switch my profile to private?
+    - How do I deactivate my profile?
+    - Can I customize my profile settings?
+    - How do I update my tenant verification status?
+    - How do I edit my preferences on the profile?
+    - How do I link my [email address](tenant_name) to the profile?
+    - How do I reset my profile password?
+    - Can I update my lease details in my profile?
+    - How do I change my profile picture in the app?
+    - How do I update my mailing address on my profile?
+    - How do I add a secondary contact to my profile?
+    - Can I view my profile update history?
+    - How do I delete an old phone number from my profile?
+
+- intent: contact_building_management
+  examples: |
+    - How can I contact the building management?
+    - Who do I speak to for building-related issues?
+    - Can I get the contact details for the management office?
+    - How do I reach the building’s administration?
+    - I need to talk to someone in [building management](tenant_name). How do I do that?
+    - Is there an email or phone number to contact [building management](tenant_name)?
+    - What’s the best way to contact the building manager?
+    - How do I file a complaint with [management](tenant_name)?
+    - Can I visit the [management office](tenant_name) in person?
+    - How do I contact [management](tenant_name) for urgent issues?
+    - How do I submit a request to [building management](tenant_name)?
+    - Is there a [management team](tenant_name) on-site?
+    - What’s the number for the building manager?
+    - How do I contact the [property manager](tenant_name)?
+    - How do I send an email to [management](tenant_name)?
+    - How do I notify [management](tenant_name) of a problem?
+    - Who is the point of contact for tenant issues?
+    - How do I request a meeting with [building management](tenant_name)?
+    - What’s the [management office](tenant_name) schedule?
+    - Can I contact the building supervisor directly?
+    - How do I escalate a problem with [management](tenant_name)?
+    - Is there an online portal to contact [management](tenant_name)?
+    - How do I call the [building maintenance hotline](tenant_name)?
+    - What’s the address of the [management office](tenant_name)?
+    - Can I request [management’s](tenant_name) contact info through the app?
+
+- intent: guest_policy
+  examples: |
+    - What is the guest policy for residents?
+    - Can I invite [guests](guest_name) to stay over?
+    - Are there any restrictions for bringing [guests](guest_name) to the amenities?
+    - How many [guests](guest_name) can I bring to the pool?
+    - Do I need to notify [management](tenant_name) if I have a [guest](guest_name)?
+    - Can [guests](guest_name) use the building’s facilities?
+    - Are there any rules for [guest parking](guest_name)?
+    - Can my [guest](guest_name) use the gym with me?
+    - What’s the maximum number of [guests](guest_name) allowed?
+    - Are overnight [guests](guest_name) allowed?
+    - Do [guests](guest_name) need to be registered with [management](tenant_name)?
+    - Can I host a [guest](guest_name) for more than one night?
+    - How many [guests](guest_name) can stay overnight?
+    - Can my [guest](guest_name) use the rooftop area?
+    - Are there fees for bringing [guests](guest_name) to the pool?
+    - Can I bring a [guest](guest_name) to community events?
+    - What is the policy for unregistered [guests](guest_name)?
+    - Can I host multiple [guests](guest_name) at the same time?
+    - Can [guests](guest_name) access the community lounge?
+    - Can I bring [guests](guest_name) to use the gym facilities?
+    - How do I notify [management](tenant_name) about a [guest](guest_name)?
+    - Are there any time restrictions for [guest](guest_name) visits?
+    - Do [guests](guest_name) have to be accompanied at all times?
+    - What should I do if my [guest](guest_name) loses their keycard?
+    - How do I request a [guest parking permit](guest_name)?
+
+- intent: move_out_process
+  examples: |
+    - How do I start the move-out process?
+    - What’s required for moving out of the building?
+    - Is there a form to fill out for moving out?
+    - How much notice do I need to give before moving out?
+    - Are there any move-out fees I should know about?
+    - What should I do with my keys when moving out?
+    - Is there a checklist for moving out?
+    - Do I need to be present for an inspection when moving out?
+    - How long does the move-out process take?
+    - Who do I notify when moving out?
+    - Is there a move-out cleaning fee?
+    - How do I schedule a move-out [date](date)?
+    - Can I reschedule my move-out [date](date)?
+    - How do I return my parking pass when moving out?
+    - Can I get my security deposit back after moving out?
+    - What do I do if I damage the apartment before moving out?
+    - Are there move-out inspections?
+    - When will I receive my deposit refund after moving out?
+    - Can I hire a moving company for the move-out process?
+    - Is there an early termination fee for moving out?
+    - What happens if I move out before my lease ends?
+    - Can I leave furniture behind when moving out?
+    - What’s the process for transferring utilities before moving out?
+    - How do I complete my final rent payment when moving out?
+    - Is there an exit survey I need to complete after moving out?
+
+- intent: lease_extension
+  examples: |
+    - How do I extend my lease?
+    - Can I renew my lease through the app?
+    - Is there a way to extend my rental agreement?
+    - What’s the process for lease renewal?
+    - How much time do I have to extend my lease before it ends?
+    - Can I change the terms of my lease when extending?
+    - Who do I contact to renew my lease?
+    - How do I get a new lease agreement?
+    - Can I request a short-term lease extension?
+    - Can I negotiate a new lease term?
+    - How do I apply for a lease renewal?
+    - What happens if I don’t extend my lease on time?
+    - Can I get a month-to-month lease extension?
+    - Is there a fee for extending my lease?
+    - Can I add someone to my lease when extending?
+    - What happens if I want to move out after extending my lease?
+    - Can I extend my lease for only six months?
+    - What’s the rent increase with a lease extension?
+    - How do I know if I’m eligible for a lease extension?
+    - What documents are needed for a lease extension?
+    - How long does it take to process a lease extension?
+    - Can I extend my lease if I have outstanding [maintenance requests](maintenance_type)?
+    - Will extending my lease affect my security deposit?
+    - What should I do if I don’t want to extend my lease?
+    - Can I extend my lease without signing a new contract?
+
+- intent: report_issue
+  examples: |
+    - I need to report an issue with my apartment.
+    - How do I submit a complaint about my [neighbors](tenant_name)?
+    - There’s something wrong with my [heating system](issue). Who do I tell?
+    - Can I report a problem through the app?
+    - My [heating system](issue) is malfunctioning, how do I report it?
+    - How do I let the [management](tenant_name) know about a noise issue?
+    - I have an urgent issue that needs to be addressed. What should I do?
+    - How do I follow up on a reported issue?
+    - Who do I contact to report a [maintenance issue](maintenance_type)?
+    - Can I report an issue anonymously?
+    - What do I do if my [neighbor](tenant_name) is disturbing me?
+    - How do I file a formal complaint?
+    - How do I report a problem with the [amenities](issue)?
+    - What’s the process for resolving issues with the apartment?
+    - How can I escalate an unresolved issue?
+    - Who do I talk to about problems in the common areas?
+    - Can I request immediate action for a [maintenance issue](maintenance_type)?
+    - How do I submit photos of the issue I’m reporting?
+    - How can I request repairs for a broken appliance?
+    - How do I notify [management](tenant_name) about a security issue?
+    - How do I report a [water leak](issue) in my unit?
+    - What should I do if there’s a power outage in the building?
+    - How do I report [vandalism](issue) in the common areas?
+    - How can I get updates on the issue I reported?
+    - How do I report a broken window in my apartment?
+
+- intent: request_document
+  examples: |
+    - How do I get a copy of my lease agreement?
+    - Can I download the tenant handbook?
+    - Where can I find my [maintenance history](maintenance_type)?
+    - How do I request proof of residency?
+    - Can I get a digital copy of my rent payment receipts?
+    - How do I get an invoice for rent?
+    - Can you send me my rent payment history?
+    - How do I request a copy of my rental agreement?
+    - How can I get a document showing I’m a tenant?
+    - How do I get a letter confirming my residency?
+    - How can I get a rent receipt for tax purposes?
+    - How do I request an insurance certificate for the building?
+    - Can I get a document showing my payment history?
+    - How do I request a document for my new address?
+    - How do I get a copy of the building rules and regulations?
+    - Can I get an official move-in checklist?
+    - How do I request an updated lease document?
+    - How do I get a copy of my utility bill?
+    - How do I request a payment receipt for rent?
+    - Can I get a statement showing my outstanding payments?
+    - Can I request proof of building compliance?
+    - How do I get a document showing my security deposit amount?
+    - How do I get proof of my rent payment method?
+    - How do I request a copy of the fire safety plan?
+    - How do I get a copy of my move-out inspection report?
+
+- intent: ask_parking_info
+  examples: |
+    - What are the parking options available?
+    - Is parking included with the apartment?
+    - Do you have [guest parking](parking) available?
+    - Can I get an additional [parking spot](parking)?
+    - How much does parking cost?
+    - Is there covered parking?
+    - Where can I park my car?
+    - Can I rent a [parking space](parking)?
+    - Is there secure parking in the building?
+    - How many [parking spaces](parking) can I get?
+    - Does the building have electric vehicle charging?
+    - Is parking assigned or first come, first served?
+    - Are there restrictions on parking?
+    - Can I get visitor parking for my guests?
+    - Is parking included in the lease?
+    - Where is the parking garage located?
+    - What is the parking policy?
+    - Do I need a permit to park?
+    - How can I apply for a [parking spot](parking)?
+    - Is parking available 24/7?
+    - Can I park my bike in the [parking garage](parking)?
+    - Are there any parking fees I should be aware of?
+    - Can you tell me about the building’s parking rules?
+    - What is the maximum number of [parking spaces](parking) I can have?
+    - Does parking come with security?
+
+- intent: maintenance_request
+  examples: |
+    - I need to submit a maintenance request.
+    - How do I report a [maintenance issue](maintenance_type)?
+    - My sink is leaking, how do I get it fixed?
+    - Can I request someone to fix the [lights](issue)?
+    - There's a problem with my [heating system](issue).
+    - The [dishwasher](issue) is broken, how do I report it?
+    - Can I ask for [maintenance](maintenance_type) help?
+    - I want to schedule a [maintenance](maintenance_type) visit.
+    - How do I get the [air conditioning](issue) repaired?
+    - Who do I contact for [maintenance](maintenance_type)?
+    - How can I request a [maintenance service](maintenance_type)?
+    - I have an issue with my [plumbing](issue).
+    - Can someone come fix my [water heater](issue)?
+    - How do I get [maintenance](maintenance_type) for the elevator?
+    - My door is stuck, I need [maintenance](maintenance_type).
+    - How do I report a broken window?
+    - Can I submit a [maintenance ticket](maintenance_type) online?
+    - I need help with a clogged drain.
+    - Can someone come check the wiring?
+    - I need an urgent [maintenance service](maintenance_type).
+    - Can [maintenance](maintenance_type) help me with my appliances?
+    - How do I report a [pest problem](issue)?
+    - Who do I call for [maintenance issues](maintenance_type)?
+
+- intent: affirm
+  examples: |
+    - Yes
+    - Yeah
+    - Sure
+    - Absolutely
+    - Definitely
+    - For sure
+    - Of course
+    - Yup
+    - That’s correct
+    - You got it
+    - Right
+    - I agree
+    - I’m sure
+    - Yes, please
+    - Sure, that works
+    - Yes, I’d like that
+    - I’m okay with that
+    - That sounds good
+    - Absolutely, go ahead
+    - Yes, I agree
+    - Sure, go for it
+    - Yes, I’m certain
+    - Yes, that’s fine
+    - Yes, do it
+    - Sure thing
+
+- intent: community_engagement
+  examples: |
+    - What community events are coming up?
+    - How can I get involved in the building's community?
+    - Are there any social activities I can join?
+    - How do I meet other tenants?
+    - Can I attend a community event?
+    - How do I sign up for the next resident meeting?
+    - What are the social clubs in the building?
+    - Are there any planned meetups for residents?
+    - I want to get more involved in community events, how do I do that?
+    - What’s the best way to engage with other tenants?
+    - Is there a group for organizing events in the building?
+    - Are there any hobby groups for tenants?
+    - I’d like to host a community event, how can I do that?
+    - How do I find out about social gatherings in the building?
+    - Are there any meetups I can attend this week?
+    - What kind of social activities does the building offer?
+    - How do I join the community BBQ?
+    - Is there a platform to communicate with other tenants?
+    - Can I host a movie night for the building’s residents?
+    - How do I learn more about the building’s social events?
+    - Are there any virtual meetups for tenants?
+    - What community initiatives are available?
+    - How do I create an event for other tenants?
+    - Can I start a group for community activities?
+    - Is there a bulletin board for community events?
+
+- intent: deny
+  examples: |
+    - No
+    - Nope
+    - I don’t think so
+    - Absolutely not
+    - No way
+    - That’s incorrect
+    - I disagree
+    - I don’t want that
+    - I’m not sure
+    - I don’t think that’s right
+    - No thanks
+    - Not at all
+    - Not interested
+    - No, that’s wrong
+    - I’m not okay with that
+    - No, I don’t agree
+    - No, I’d rather not
+    - Not right now
+    - No, I don’t want that
+    - No, that doesn’t work for me
+    - That’s not right
+    - No, I don’t need that
+    - I’m not comfortable with that
+    - I’d rather not
+    - No, I don’t think so
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Talk to you soon
+    - Take care
+    - Have a great day
+    - Catch you later
+    - Farewell
+    - I’m off, bye
+    - See you next time
+    - I’ll talk to you later
+    - See you tomorrow
+    - Have a good one
+    - I’m leaving now, goodbye
+    - Have a nice day
+    - Talk to you later, bye
+    - See you soon
+    - Bye for now
+    - Later
+    - I’ll see you around
+    - Goodbye, take care
+    - I’m out, bye
+    - Talk soon, goodbye
+    - See you at the next event
+    - Bye, have a nice evening
+
+- intent: greet
+  examples: |
+    - Hello
+    - Hi
+    - Hey
+    - Good morning
+    - Good afternoon
+    - Good evening
+    - How’s it going?
+    - What’s up?
+    - How are you doing?
+    - How are you today?
+    - Hello, how can I help you?
+    - Hi there
+    - Hey there
+    - Hi, nice to meet you
+    - Good to see you
+    - Hello, how are things?
+    - Hi, how can I assist you?
+    - What can I do for you today?
+    - Hello, what’s going on?
+    - Hey, what’s up?
+    - Hi, how’s your day going?
+    - How’s your day been?
+    - Hi, hope you’re well
+    - Hello, how’s everything?
+    - Hi, how can I be of service?
+
+- intent: maintenance_request_follow_up
+  examples: |
+    - Can I get an update on my [maintenance request](maintenance_type)?
+    - Has anyone been assigned to fix my [leaking pipe](issue)?
+    - What’s the status of my [maintenance request](maintenance_type)?
+    - How do I check the progress of my [plumbing issue](issue)?
+    - Has my [request](maintenance_type) been approved?
+    - Who’s handling my [maintenance ticket](maintenance_type)?
+    - Can you give me an update on my [AC repair](issue)?
+    - Is my [repair](maintenance_type) still pending?
+    - When will my [maintenance request](maintenance_type) be completed?
+    - I haven’t received a response to my [maintenance request](maintenance_type)
+    - Can you follow up on my [pest control](issue) request?
+    - Is my [service request](maintenance_type) being processed?
+    - How much longer until my [HVAC issue](issue) is fixed?
+    - What’s the ETA on my [maintenance service](maintenance_type)?
+    - I haven’t heard back about my [repair request](maintenance_type)
+    - When will someone come to fix my [broken door](issue)?
+    - Can you tell me when the [technician](maintenance_type) will arrive?
+    - I’m still waiting on a response to my [repair ticket](maintenance_type)
+    - How do I know if my [repair](maintenance_type) is scheduled?
+    - Can I track my [repair](maintenance_type) status online?
+    - When will my [maintenance issue](maintenance_type) be resolved?
+    - Is my [maintenance request](maintenance_type) still active?
+    - I haven’t received any updates on my [repair](maintenance_type)
+    - How do I escalate my [maintenance issue](maintenance_type)?
+    - Can I get an ETA for my [plumbing repair](issue)?
+
+- intent: package_delivery
+  examples: |
+    - When is my [package](issue) arriving?
+    - How do I pick up my [parcel](issue)?
+    - Is my [delivery](issue) ready for collection?
+    - Where can I get my [package](issue)?
+    - Has my [courier](issue) arrived?
+    - How do I know if my [package](issue) has been delivered?
+    - Is there a [package](issue) waiting for me?
+    - Can I track my [package](issue) delivery?
+    - When will my [package](issue) be ready for pickup?
+    - Has my [parcel](issue) been dropped off?
+    - Is my [mail](issue) available for pickup?
+    - How do I retrieve my [delivery](issue)?
+    - Where do I collect my [package](issue)?
+    - Has the [post](issue) arrived?
+    - Is my [delivery](issue) in the mailbox?
+    - How do I sign for a [package](issue)?
+    - Where should I collect my [parcel](issue)?
+    - Has my [package](issue) been delivered to the building?
+    - How do I know if my [package](issue) is here?
+    - Is my [delivery](issue) at the front desk?
+    - What time can I pick up my [package](issue)?
+    - Can someone else collect my [package](issue) for me?
+    - Where is the [courier](issue) for my delivery?
+    - What’s the status of my [package](issue)?
+
+- intent: package_inquiry
+  examples: |
+    - Do I have any [packages](issue) waiting?
+    - How can I check if my [package](issue) has arrived?
+    - Has my [parcel](issue) been delivered?
+    - Are there any [deliveries](issue) for me today?
+    - I’m waiting for a [package](issue), has it arrived?
+    - Where can I find my [mail](issue)?
+    - Did my [delivery](issue) arrive at the building?
+    - Can you tell me if there’s a [package](issue) for me?
+    - Has the [courier](issue) delivered my [parcel](issue)?
+    - How do I know if my [package](issue) has arrived?
+    - Is my [parcel](issue) ready for pickup?
+    - Do I need to sign for my [package](issue)?
+    - Where should I go to pick up my [parcel](issue)?
+    - Did my [package](issue) get delivered to the front desk?
+    - I’m expecting a [package](issue), where can I find it?
+    - How do I track my [delivery](issue)?
+    - When can I pick up my [package](issue)?
+    - Who’s in charge of [package](issue) deliveries?
+    - Did my [mail](issue) come today?
+    - Where is the [package](issue) I’m expecting?
+    - How do I check if my [delivery](issue) has arrived?
+    - Is there a place to pick up [parcels](issue)?
+    - Can I get a status update on my [package](issue)?
+    - How long will it take for my [delivery](issue) to arrive?
+
+- intent: request_maintenance
+  examples: |
+    - How do I request [maintenance](maintenance_type)?
+    - I need someone to fix my [leaky faucet](issue)
+    - Can I get [maintenance](maintenance_type) for my [plumbing issue](issue)?
+    - I have a [problem with the heating](issue), how do I report it?
+    - How do I request help for my [air conditioning](issue)?
+    - I need a [repair](maintenance_type) done in my apartment
+    - Who do I call to get [maintenance](maintenance_type) for my [broken appliance](issue)?
+    - How do I submit a [maintenance](maintenance_type) request?
+    - Can I get [maintenance](maintenance_type) outside of business hours?
+    - How soon can someone fix my [plumbing](issue)?
+    - I have a [clogged drain](issue), how do I get it fixed?
+    - How do I schedule a [maintenance visit](maintenance_type)?
+    - Can I request [maintenance](maintenance_type) through the app?
+    - Who do I contact for [urgent maintenance](maintenance_type)?
+    - What’s the process to request [repairs](maintenance_type)?
+    - Can I get [pest control](issue) for my unit?
+    - How do I fix my [HVAC](issue) system?
+    - I have a [water leak](issue), who do I call for [maintenance](maintenance_type)?
+    - Can I get [maintenance](maintenance_type) for a [broken window](issue)?
+    - Can [maintenance](maintenance_type) come today for my [broken door](issue)?
+    - What’s the turnaround time for [maintenance](maintenance_type)?
+    - I need [maintenance](maintenance_type) for my [dishwasher](issue)
+    - Can I get someone to check my [plumbing](issue)?
+    - How do I request [emergency maintenance](maintenance_type)?
+    - What’s the cost for a [repair](maintenance_type)?
+
+- intent: utility_management
+  examples: |
+    - How do I manage my [utility payments](utility)?
+    - Where can I check my [utility bills](utility)?
+    - Can I set up automatic payments for [utilities](utility)?
+    - How do I view my [electricity usage](utility)?
+    - How do I report an issue with my [water service](utility)?
+    - Where can I pay for my [utilities](utility)?
+    - How do I get an update on my [utility bill](utility)?
+    - Can I manage my [electricity](utility) payments online?
+    - How do I request [utility service](utility)?
+    - How do I pay my [water bill](utility)?
+    - Can I report an issue with my [gas service](utility)?
+    - How do I set up [utility payments](utility)?
+    - Who do I contact for problems with my [utilities](utility)?
+    - How do I change my [utility provider](utility)?
+    - How do I access my [utility payment](utility) history?
+    - Is there a [utility management](utility) portal?
+    - Can I switch my [utility provider](utility)?
+    - What’s the process for [utility management](utility)?
+    - How do I set up [water services](utility)?
+    - How do I know if my [utility payment](utility) went through?
+    - Can I track my [electricity usage](utility)?
+    - How do I request a copy of my [utility bill](utility)?
+    - How do I get help with my [utility payment](utility)?
+    - Can I request a [utility](utility) payment extension?
+    - What are my [utility costs](utility) this month?
+
+- intent: parking_inquiry
+  examples: |
+    - Is there a [parking spot](parking_spot) available for my car?
+    - Can I reserve a [parking spot](parking_spot) for my [guest_name]?
+    - How much does it cost to rent a [parking spot](parking_spot)?
+    - Where is the [parking spot](parking_spot) located?
+    - Do I need a permit to park in the [parking spot](parking_spot)?
+    - Can I park my car in the [parking spot](parking_spot) overnight?
+    - Is there secure parking available for [guest_name]?
+    - How do I apply for a [parking_spot](parking_spot)?
+    - Can I have more than one [parking spot](parking_spot) for my apartment?
+    - How many [parking spots](parking_spot) are available?
+    - Can my [guest_name] use the [parking spot](parking_spot) while they visit?
+    - Is [guest parking](parking_spot) available during weekends?
+    - Can I change my assigned [parking spot](parking_spot)?
+    - Are there extra fees for using the [parking spot](parking_spot)?
+    - Can I pay for the [parking spot](parking_spot) with a [payment_method]?
+    - Are there electric vehicle charging stations in the [parking spot](parking_spot) area?
+    - Is there a waiting list for [parking spots](parking_spot)?
+    - How do I register my car for the [parking spot](parking_spot)?
+    - Can I transfer my [parking spot](parking_spot) to a new tenant?
+    - Does my lease include a [parking spot](parking_spot)?
+    - Are there any rules for [guest_name] using the [parking spot](parking_spot)?
+    - Can I cancel my [parking spot](parking_spot) reservation if my plans change?
+    - Is there a maximum duration for parking in a [parking spot](parking_spot)?
+    - Can I request a covered [parking spot](parking_spot)?
+    - What are the hours of operation for the [parking spot](parking_spot)?

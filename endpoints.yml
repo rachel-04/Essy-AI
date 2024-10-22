@@ -1,0 +1,33 @@
+# This is the endpoint configuration file.
+
+# Action server URL (for custom actions)
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+
+# Tracker store, which will store conversation histories.
+tracker_store:
+  type: sql
+  dialect: "sqlite"  # Change to "postgresql" or "mysql" if needed
+  url: "sqlite:///rasa.db"  # The SQLite file path where the tracker data will be saved
+  db: rasa  # Database name
+  # username: ""  # For SQLite, these fields are not required
+  # password: ""  # For SQLite, these fields are not required
+  # host: localhost
+
+# Uncomment and configure the below if you're using Redis for storing conversation data
+# tracker_store:
+#   type: redis
+#   url: <redis-url>
+#   port: 6379
+#   db: 0
+#   password: <your-redis-password>  # if applicable
+
+# Uncomment and configure the below if you need a different event broker (e.g., for RabbitMQ)
+# event_broker:
+#   type: "pika"
+#   url: <rabbitmq-url>
+#   queue: <your-queue-name>
+#   username: <your-username>
+#   password: <your-password>
+

@@ -1,0 +1,147 @@
+version: "3.1"
+
+rules:
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Goodbye user
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Affirm
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+
+  - rule: Deny
+    steps:
+      - intent: deny
+      - action: utter_deny
+
+  - rule: Provide rent payment info
+    steps:
+      - intent: rent_payment
+      - action: utter_rent_payment
+      - action: utter_confirm_rent_payment
+
+  - rule: Provide amenities availability info
+    steps:
+      - intent: amenities_availability
+      - action: utter_amenities_availability
+
+  - rule: Sign up for an event
+    steps:
+      - intent: event_sign_up
+      - action: utter_event_sign_up
+      - action: utter_confirm_event_sign_up
+
+  
+
+  - rule: Request profile update
+    steps:
+      - intent: profile_update
+      - action: utter_profile_update  # Match the story flow
+      - action: utter_profile_update_confirmation
+
+  - rule: Contact building management
+    steps:
+      - intent: contact_building_management
+      - action: utter_contact_building_management
+
+  - rule: Parking inquiry
+    steps:
+      - intent: parking_inquiry
+      - action: utter_parking_inquiry
+
+  - rule: Guest policy
+    steps:
+      - intent: guest_policy
+      - action: utter_guest_policy
+
+  - rule: Move-in process
+    steps:
+      - intent: move_in_process
+      - action: utter_move_in_process  # Match the story flow
+      - action: utter_move_in_confirmation
+
+  - rule: Move-out process
+    steps:
+      - intent: move_out_process
+      - action: utter_move_out_process
+
+  - rule: Lease extension process
+    steps:
+      - intent: lease_extension
+      - action: utter_lease_extension  # Match the story flow
+      - action: utter_ask_leasing_terms
+
+  - rule: Report an issue
+    steps:
+      - intent: report_issue
+      - action: utter_report_issue
+
+  - rule: Request a document
+    steps:
+      - intent: request_document
+      - action: utter_request_document
+
+  - rule: Community engagement info
+    steps:
+      - intent: community_engagement
+      - action: utter_community_engagement
+
+  - rule: Maintenance request follow-up
+    steps:
+      - intent: maintenance_request_follow_up
+      - action: utter_maintenance_request_follow_up
+
+  - rule: Utility management info
+    steps:
+      - intent: utility_management
+      - action: utter_utility_management
+
+  - rule: Package delivery info
+    steps:
+      - intent: package_delivery
+      - action: utter_package_delivery
+
+  - rule: Ask for parking info
+    steps:
+      - intent: ask_parking_info
+      - action: utter_ask_parking_info
+
+  - rule: Request maintenance
+    steps:
+      - intent: maintenance_request
+      - action: utter_request_maintenance
+      - action: utter_confirm_maintenance
+
+
+  - rule: Handle fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback
+
+  - rule: Activate maintenance form
+    steps:
+      - intent: request_maintenance
+      - action: maintenance_form
+      - active_loop: maintenance_form
+
+  - rule: Submit maintenance form
+    condition:
+      - active_loop: maintenance_form
+    steps:
+      - action: maintenance_form
+      - active_loop: null
+      - action: utter_confirm_maintenance
+
+  - rule: Deactivate maintenance form on greet
+    steps:
+      - intent: greet
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_greet

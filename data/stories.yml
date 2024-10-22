@@ -1,0 +1,141 @@
+version: "3.1"
+stories:
+  - story: Amenities availability
+    steps:
+      - intent: amenities_availability
+      - action: utter_amenities_availability
+
+  - story: Event sign-up flow
+    steps:
+      - intent: event_sign_up
+      - action: utter_event_sign_up
+      - action: utter_confirm_event_sign_up
+       
+
+  - story: Lease extension flow
+    steps:
+      - intent: lease_extension
+      - action: utter_lease_extension
+      - action: utter_ask_leasing_terms
+
+  - story: Contact building management
+    steps:
+      - intent: contact_building_management
+      - action: utter_contact_building_management
+
+  - story: Parking inquiry
+    steps:
+      - intent: parking_inquiry
+      - action: utter_parking_inquiry
+
+  - story: Guest policy
+    steps:
+      - intent: guest_policy
+      - action: utter_guest_policy
+
+  - story: Move out process
+    steps:
+      - intent: move_out_process
+      - action: utter_move_out_process
+
+  - story: Report issue
+    steps:
+      - intent: report_issue
+      - action: utter_report_issue
+
+  - story: Request document
+    steps:
+      - intent: request_document
+      - action: utter_request_document
+
+  - story: Community engagement
+    steps:
+      - intent: community_engagement
+      - action: utter_community_engagement
+
+  - story: Maintenance request follow-up
+    steps:
+      - intent: maintenance_request_follow_up
+      - action: utter_maintenance_request_follow_up
+
+  - story: Utility management
+    steps:
+      - intent: utility_management
+      - action: utter_utility_management
+
+  - story: Package delivery
+    steps:
+      - intent: package_delivery
+      - action: utter_package_delivery
+
+  - story: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: Goodbye user
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Affirmation
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+
+  - story: Denial
+    steps:
+      - intent: deny
+      - action: utter_deny
+
+  - story: Ask for parking information
+    steps:
+      - intent: ask_parking_info
+      - action: utter_ask_parking_info
+
+  - story: Request maintenance flow
+    steps:
+    - intent: request_maintenance
+    - action: maintenance_form
+    - active_loop: maintenance_form
+
+
+  - story: Schedule maintenance flow
+    steps:
+      - intent: schedule_maintenance
+      - action: utter_ask_maintenance_type
+      - action: action_listen
+      - slot_was_set:
+          - maintenance_type
+      - action: utter_confirm_maintenance
+
+  - story: Profile update flow
+    steps:
+      - intent: profile_update
+      - action: utter_profile_update
+      - action: utter_profile_update_confirmation
+
+  - story: Move-in process flow
+    steps:
+      - intent: move_in_process
+      - action: utter_move_in_process
+      - action: utter_move_in_confirmation
+
+  - story: Default response
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback
+
+
+
+  - story: Rent payment flow
+    steps:
+      - intent: rent_payment
+      - action: utter_rent_payment
+      - action: utter_confirm_rent_payment
+
+  - story: Package inquiry
+    steps:
+      - intent: package_inquiry
+      - action: utter_package_inquiry
+

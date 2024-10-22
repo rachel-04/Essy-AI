@@ -1,0 +1,101 @@
+version: "3.1"
+
+responses:
+
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_affirm:
+    - text: "Yes, that’s correct."
+
+  utter_deny:
+    - text: "No, that’s not what I meant."
+
+  utter_ask_parking_info:
+    - text: "Could you please provide more details about your parking inquiry?"
+
+  utter_amenities_availability:
+    - text: "The amenities available include the gym, pool, and community hall."
+
+  utter_event_sign_up:
+    - text: "You can sign up for events through the community portal."
+
+  utter_contact_building_management:
+    - text: "You can contact building management at the following number: [number]."
+
+  utter_move_in_process:
+    - text: "The move-in process is as follows: [details]."
+
+  utter_move_out_process:
+    - text: "Please contact building management to begin the move-out process."
+
+
+
+  utter_maintenance_request_follow_up:
+    - text: "Your maintenance request is being followed up by our team."
+
+  utter_profile_update:
+    - text: "You can update your profile information through the settings page."
+
+  utter_lease_extension:
+    - text: "You can request a lease extension by filling out the form on the portal."
+
+  utter_rent_payment:
+    - text: "Rent payments can be made via the portal under 'Payments'."
+
+  utter_report_issue:
+    - text: "Please describe the issue you'd like to report."
+
+  utter_request_document:
+    - text: "You can request any building-related documents through the portal."
+
+  utter_package_delivery:
+    - text: "Packages can be delivered to the building’s secure package room. You’ll be notified in the app when your package arrives, and you can schedule a pickup time."
+
+  utter_community_engagement:
+    - text: "There are several events and meetups planned for community engagement."
+
+  utter_parking_inquiry:
+    - text: "The parking spaces available are listed in the portal. Do you have a specific question?"
+
+  utter_guest_policy:
+    - text: "Guests are allowed for a maximum of three consecutive nights."
+
+  utter_confirm_maintenance:
+    - text: "Your maintenance request has been submitted successfully."
+
+  utter_confirm_event_sign_up:
+    - text: "You have been signed up for the event successfully."
+
+  utter_ask_maintenance_type:
+    - text: "What type of maintenance issue are you reporting?"
+
+  utter_fallback:
+    - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
+
+  utter_confirm_rent_payment:
+    - text: "Your rent payment has been successfully recorded."
+
+
+  utter_ask_leasing_terms:
+    - text: "Could you confirm the duration you'd like to extend your lease for?"
+
+  utter_move_in_confirmation:
+    - text: "You’ve successfully started the move-in process. Please check your email for details."
+
+  utter_profile_update_confirmation:
+    - text: "Your profile has been updated successfully."
+
+  utter_utility_management:
+    - text: "You can manage your utilities through the tenant portal. If you need help setting up, paying bills, or transferring utilities, feel free to reach out to building management."
+
+  utter_package_inquiry:
+    - text: "You can track your package via the community portal."
+
+  utter_request_maintenance:
+    - text: "Please provide details about the maintenance you'd like to request."
+
+
